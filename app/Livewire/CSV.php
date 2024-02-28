@@ -7,7 +7,7 @@ use Livewire\Component;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
 
-class CSV extends Component
+class Csv extends Component
 {
     use WithFileUploads;
     public $filename;
