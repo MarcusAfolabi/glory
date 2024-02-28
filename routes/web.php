@@ -1,6 +1,5 @@
 <?php
 
-use App\Livewire\Attendance;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +21,11 @@ Route::get('/attendance', function () {
     return view('attendance');
 });
 
+
+Route::get('/attendee', function () {
+    return view('attendee');
+});
+
 Route::middleware('auth')->get('/members', function () {
     return view('members');
 });
@@ -34,7 +38,7 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-Route::middleware('auth')->get('/dashboard', function () {
+Route::middleware('auth')->get('/uploadMembers', function () {
     return view('dashboard');
 });
  

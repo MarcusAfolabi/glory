@@ -8,23 +8,20 @@
         ">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="order-2 col-xl-5 col-lg-4 d-none d-xl-block order-lg-1">
-                        <div class="position-relative">
-                            <img src="assets/img/others/ai-ills.svg" class="img-fluid aai-signup-in-img" alt />
-                        </div>
-                    </div>
-                    <div class="order-1 mb-5 col-xl-7 ps-xl-5 order-lg-2 mb-lg-0">
+                    <div class="order-1 mb-5 col-xl-12 ps-xl-5 order-lg-2 mb-lg-0">
                         <div class="aai-form-wrapper">
-                            <div class>
+                            <div>
                                 <div
                                     class="text-center aai-form-header d-flex justify-content-center flex-column align-items-center">
-                                    <h2 class="aai-form-title">Member Onboarding</h2>
-                                    <p class="aai-form-desc">RCCG Glory 2 Glory member database</p>
+                                    <h2 class="aai-form-title">Attendance Lists</h2>
+                                    <p class="aai-form-desc">RCCG Glory 2 Glory member attendance database</p>
                                 </div>
-
-                               @livewire('csv')
+                                <div
+                                    class="d-flex flex-column flex-md-row aai-option-bar justify-content-center align-items-center">
+                                    <span class="aai-auth-line"></span>
+                                </div>
                             </div>
-                            @livewire('membership')
+                            @livewire('attendee')
                         </div>
                     </div>
                 </div>

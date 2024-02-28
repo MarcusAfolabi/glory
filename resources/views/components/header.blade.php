@@ -52,7 +52,7 @@
                             <a wire:navigate.hover href="{{ url('members') }}" class="nav-link"> All Members</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">All Attendance</a>
+                            <a class="nav-link" wire:navigate.hover href="{{ url('attendee') }}">All Attendance</a>
                         </li>
                     </ul>
                     <div class="gap-4 mt-4 d-flex align-items-center">
@@ -66,9 +66,11 @@
                 <div class="gap-4 navbar-right d-flex align-items-center">
                     <div class="align-items-center aai-signup-in-links d-none d-lg-flex">
                         <a wire:navigate.hover href="{{ url('login') }}">Login</a>
-                        <a wire:navigate.hover href="{{ url('login') }}" class="text-white">Attendance</a>
+                        <a wire:navigate.hover href="{{ url('register') }}" class="text-white">Register</a>
+                        <a wire:navigate.hover href="{{ url('attendee') }}" class="text-white">Attendance</a>
                         <a wire:navigate.hover href="{{ url('members') }}" class="text-white">Members</a>
-                        <a wire:navigate.hover href="{{ url('register') }}" class="aai-gradient-outline-btn">Protocol </a>
+                        <a wire:navigate.hover href="{{ url('uploadMembers') }}" class="aai-gradient-outline-btn">Onboard
+                            Member </a>
                     </div>
                     <button class="navbar-toggler d-block d-xl-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
