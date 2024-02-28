@@ -5,7 +5,9 @@
                 <div class="col-auto">
                     <div>
                         <a wire:navigate.hover href="/">
-                            <img src="assets/img/logo/logo-m.svg" alt />
+                            <img class="w-90 h-12"
+                                src="https://www.rccgg2ghouse.org/wp-content/uploads/2022/09/cropped-G2GHouse-png-new.png"
+                                alt />
                         </a>
                     </div>
                 </div>
@@ -25,13 +27,15 @@
         <div class="container">
             <nav class="navbar navbar-expand-xl justify-content-between">
                 <a wire:navigate.hover href="/">
-                    <img src="assets/img/logo/logo-m.svg" alt />
+                    <img src="https://www.rccgg2ghouse.org/wp-content/uploads/2022/09/cropped-G2GHouse-png-new.png" alt />
                 </a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="mx-auto navbar-nav">
                         <li class="d-block d-xl-none">
                             <div class="logo">
-                                <a wire:navigate.hover href="/"><img src="assets/img/logo/logo-m.svg" alt /></a>
+                                <a wire:navigate.hover href="/"><img
+                                        src="https://www.rccgg2ghouse.org/wp-content/uploads/2022/09/cropped-G2GHouse-png-new.png"
+                                        alt /></a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">

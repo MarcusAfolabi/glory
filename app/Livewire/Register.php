@@ -43,7 +43,7 @@ class Register extends Component
         ]);
         session()->flash('status', 'User Account created');
         Auth::login($user);
-        $this->redirect('/dashboard', navigate: true);
+        $this->redirect('/uploadMembers', navigate: true);
     }
 
     public function render()

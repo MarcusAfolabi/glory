@@ -34,7 +34,7 @@ class Login extends Component
         if ($user) {
             if (Hash::check($this->password, $user->password)) {
                 Auth::login($user);
-                return redirect()->to('/dashboard');
+                return redirect()->to('/uploadMembers');
             } else {
                 // Password is incorrect, display an error message
                 $this->addError('password', 'Invalid password.');
