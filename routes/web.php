@@ -21,6 +21,10 @@ Route::get('/attendance', function () {
     return view('attendance');
 });
 
+Route::get('/generateQR', function () {
+    return view('qrcode');
+});
+
 
 Route::get('/attendee', function () {
     return view('attendee');

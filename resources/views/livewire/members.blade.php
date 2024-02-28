@@ -3,13 +3,13 @@
         <div class="spinner"></div>
     </div>
     <div wire:loading.remove> --}}
-    {{-- <form wire:model.live="search">
-            <div class="flex justify-between"> --}}
-    <input wire:model.live="search" type="search" class="mb-3 form-control" placeholder="Search by name or phone">
-
-    {{-- <button type="submit" class="w-2/3 mb-3 form-control">Search posts</button>
-            </div>
-        </form> --}}
+    {{-- <form wire:model.live="qrcode" > --}}
+    <form>
+        <div class="flex justify-between gap-2">
+            <input wire:model.live="search" type="search" class="mb-3 form-control" placeholder="Search by name or phone">
+            <button type="submit" class="w-2/3 mb-3 text-white form-control border-red-50">Generate QR Code</button>
+        </div>
+    </form>
     @if ($selectedMemberId)
         {{-- To edit member form  --}}
         <form wire:submit.prevent='updateMember'>
@@ -52,13 +52,19 @@
                         <td>
                             <button wire:click="editMember({{ $member->id }})"
                                 class="btn btn-primary btn-sm">Edit</button>
-                            <button
-                                x-on:click="
-                if (confirm('Are you sure you want to delete {{ $member->name }}?')) {
-                    Livewire.emit('deleteMember', {{ $member->id }})
-                }
-            "
+                            <button wire:click="deleteMember({{ $member->id }})"
+                                onclick="if (!confirm('Are you sure you want to delete this member?')) return false;"
                                 class="btn btn-danger btn-sm">Delete</button>
+                            {{-- <button onclick="confirmDelete({{ $member->id }})"
+                                class="btn btn-danger btn-sm">Delete</button>
+
+                            <script>
+                                function confirmDelete(memberId) {
+                                    if (confirm('Are you sure you want to delete this member?')) {
+                                        Livewire.emit('deleteMember', memberId);
+                                    }
+                                }
+                            </script> --}}
                         </td>
                     </tr>
                 @endforeach
